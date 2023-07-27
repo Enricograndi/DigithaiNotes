@@ -29,7 +29,7 @@
                 <div class="card bg-alt shadow-sm">
                     
                     <div class="card-body p-2">
-                        
+                        <form method="post" action="" class="mt-4">
                             {% csrf_token %}
                             {{ form.non_field_errors }}
                             {{ form|crispy }}
@@ -50,7 +50,7 @@
                                
 
                             <button type="submit" name="signup" class="btn btn-block btn-primary">Save</button>
-
+                        
                         </form>
                     </div>
                 </div>

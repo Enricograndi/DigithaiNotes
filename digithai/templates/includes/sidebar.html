@@ -1,0 +1,43 @@
+
+
+    {% load static %}
+
+    <nav id="sidebarMenu" class="sidebar d-md-block bg-primary text-white collapse px-4 d-print-none">
+        <div class="sidebar-sticky pt-3 mx-auto">
+            <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+            
+            <div class="collapse-close d-md-none">
+                <a href="#sidebarMenu" class="fas fa-times" data-toggle="collapse"
+                    data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                    aria-label="Toggle navigation"></a>
+            </div>
+            </div>
+            <ul class="nav flex-column">
+
+                <img  src="{% static 'assets/img/brand/logo-white.png' %}" width="150%" alt="Digithai logo"></img>
+                <hr class="sidebar-divider">
+            
+            <li class="nav-item">
+                <a href="/" class="nav-link">
+                    <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
+                    <span>Homepage</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="{% url 'list-notes' %}" class="nav-link">
+                    <span class="sidebar-icon">
+                        <span class="fas fa-user-shield"></span></span>
+                        <span>Notes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'logout' %}" class="nav-link">
+                    <span class="sidebar-icon">
+                        <span class="fas fa-sign-out-alt"></span></span>
+                        <span>Log Out</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </nav>

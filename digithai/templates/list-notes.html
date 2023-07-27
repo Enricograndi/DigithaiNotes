@@ -1,0 +1,118 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} {{title}} {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+    <main class="content">
+
+        {% include 'includes/navigation.html' %}
+
+        <div class="preloader bg-soft flex-column justify-content-center align-items-center">
+            <img class="loader-element animate__animated animate__jackInTheBox" src="/static/assets/img/brand/logo.png" height="60" alt="Digithai logo">
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+                <a class="btn btn-primary btn-sm mr-2" href="{% url 'create-notes' %}" >
+                    <span class="fas fa-plus mr-2"></span>New Note</a>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-12 mb-4">
+                <div class="card bg-alt shadow-sm">
+                    <div class="card-header d-flex flex-row align-items-center flex-0">
+                        <div class="d-block">
+                            <div class="h5 font-weight-normal mb-2">Search by title notes</div>
+                            <form action="" method="get">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon2"><span class="fas fa-search"></span></span>
+                                    <input type="text" name="search" class="form-control" placeholder="Search">
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="card border-light shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-centered table-nowrap mb-0 rounded table-hovered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th class="border-0">#</th>
+                                    <th class="border-0">Date</th>
+                                    <th class="border-0">Last update</th>
+                                    <th class="border-0">Title</th>
+                                    <th class="border-0">Text</th>
+                                    <th class="border-0">Edit</th>
+                                    <th class="border-0">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Item -->
+                                   
+                                {% for note in notes %}
+
+                        
+                                <tr >
+                                    
+                                    <td class="border-0">
+                                        <a href="{% url 'show-note' note.id %}" class="text-primary font-weight-bold">
+                                            {{forloop.counter}}
+                                        </a>
+                                     </td>
+                                    
+                                    <td class="border-0">
+                                        <a href="{% url 'show-note' note.id %}">
+                                            {{note.created_at}}
+                                        </a>
+                                    </td>
+                                    <td class="border-0">
+                                        <a href="{% url 'show-note' note.id %}">
+                                            {{note.updated_at}}
+                                        </a>                                       
+                                    </td>
+                                    <td class="border-0">
+                                        <a href="{% url 'show-note' note.id %}">
+                                            {{note.title}}
+                                        </a>                                        
+                                    </td>
+                                    <td class="border-0">
+                                        <a href="{% url 'show-note' note.id %}">
+                                            {{note.text}}
+                                        </a>                                        
+                                    </td>
+                                    <td class="border-0">
+                                        <a class="btn btn-outline-secondary" href="{% url 'edit-notes' note.id %}" type="button">Edit</a>
+                                    </td>
+                                    <td class="border-0">
+                                        <a class="btn btn-outline-danger" href="{% url 'delete-notes' note.id %}" type="button">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                <!-- End of Item -->
+    
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          
+
+        {% include 'includes/footer.html' %}
+
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

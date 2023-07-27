@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} {{title}} {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<!-- BOOTSTRAP 4 per crispy -->
+
+
+    <main class="content">
+
+        {% include 'includes/navigation.html' %}
+
+        <div class="preloader bg-soft flex-column justify-content-center align-items-center">
+            <img class="loader-element animate__animated animate__jackInTheBox" src="/static/assets/img/brand/logo.png" height="60" alt="Digithai logo">
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+            <a class="btn btn-primary btn-sm mr-2" href="{% url 'edit-notes' note.id %}" >
+                <span class="fas fa-cloud-upload-alt mr-2"></span>Edit Note</a>
+    </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-12 mb-4">
+                <div class="card bg-alt shadow-sm">
+                    <div class="card-header d-flex flex-row align-items-center flex-0">
+                        <div class="d-block">
+                            <h2 class="h3">{{note.title}}</h2>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="card-body d-flex flex-row align-items-center flex-0">
+                      <div class="d-block">
+                          {{note.text}}
+                      </div>
+                    </div>
+                </div>
+            </div>
+          
+
+        {% include 'includes/footer.html' %}
+
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

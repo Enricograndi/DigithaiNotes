@@ -3,7 +3,7 @@
 
 ## Features:
 
-1. User authentication: Users should be able to sign up, log in, and log out.
+1. User authentication: Users should be able to sign up, log in, and log out. ok
 2. Note creation: Users should be able to create new notes by entering a title and content. ok
 3. Note listing: Users should be able to see a list of all their notes on a single page. ok
 4. Note detail view: Users should be able to click on a note in the list to view its title and content. ok
@@ -12,8 +12,8 @@
 7. User-specific data: Each user should only be able to see and modify their own notes.ok
 8. Filtering: Users should be able to filter notes by title using a search bar.ok
 9. Testing: Write unit tests for at least two of the core application features, such as note creation or editing. The tests should cover both positive and negative scenarios and demonstrate the correct functioning of the application. ok
-10. Provide a readme to explain how to start the application
-11. Deliver on a public GitHub repository within 5 days, extra points for the delivery on a Docker container.
+10. Provide a readme to explain how to start the application. ok
+11. Deliver on a public GitHub repository within 5 days, extra points for the delivery on a Docker container. ok
 
 
 ## Technologies Used:

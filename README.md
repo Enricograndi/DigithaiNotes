@@ -50,11 +50,5 @@
 3. Run: `docker build .`.
 4. Run: `docker-compose up`. 
 5. The webapp will be available on: [http://localhost:8000](http://localhost:8000)
-
-### From Docker Hub [https://hub.docker.com/r/enricograndi14/digithai](https://hub.docker.com/r/enricograndi14/digithai)
-1. Install docker on your machine
-2. Run: `docker pull enricograndi14/digithai`.
-3. Run: `docker run enricograndi14/digithai`.
-4. The webapp will be available on: [http://localhost:8000](http://localhost:8000)
     
   

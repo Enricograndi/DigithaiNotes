@@ -42,5 +42,13 @@
 6. Launch the server: `python manage.py migrate`.
 7. In your web browser, enter the address: [http://localhost:8000](http://localhost:8000) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
+
+## Docker contnaneir usage:
+
+1. Install docker on yoru machine
+2. Open the terminal and move to the path where you downloaded the file.
+3. Run: `docker build .`.
+4. Run: `docker-compose up`. 
+5. The webapp will be available on: [http://localhost:8000](http://localhost:8000)
     
   

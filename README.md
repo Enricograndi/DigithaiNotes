@@ -19,8 +19,8 @@
 ## Technologies Used:
 - Python
 - Django
-- Bootstrap
-- JavaScript
+- CSS 
+- JavaScript 
 
 ## Additional Python Modules Required:
 - Django

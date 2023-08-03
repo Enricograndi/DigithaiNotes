@@ -39,7 +39,7 @@
 3. Install requirements: `pip install -r requirements.txt`.
 4. Create a new database: `python manage.py makemigrations`.
     - Create a new database: `python manage.py migrate`.
-6. Launch the server: `python manage.py migrate`.
+6. Launch the server: `python manage.py runserver`.
 7. In your web browser, enter the address: [http://localhost:8000](http://localhost:8000) or [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 
